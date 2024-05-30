@@ -1,0 +1,103 @@
+<Title>Mythical Mastery</Title>
+<head></head>
+
+<body>
+<style>
+body {
+    background: black;
+    
+    
+}
+
+.Health-bar
+{   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+</style>
+
+<div style="position: absolute; display: inline-block;">
+    <canvas id="canvas"></canvas>
+    <div id = "Health-bar">
+        <div id ="Health-text" style="position: fixed;top: 2%; color: white; font-size: 29px;">Health :</div>
+        <div id="black-bar" style= "background-color: black; height: 45px; width:318px; position:fixed; top: 2%;left:6.5%; "></div>
+        <div id="Health" style= "background-color: red; height: 30px; width:300px; position:fixed; top: 2.75%;left:7%; "></div>
+        <div><span style="position: fixed;top: 10%; color: white; font-size: 29px;">Score:<span id="score" > 0</span> </div>
+    </div>    
+
+
+    <div id="GameOver"
+        style ="
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        "
+        >
+        <img src="./img/textfx (1).png" alt="">
+        <button
+            id="Respawn"
+            style="
+            position:inherit;
+            width:400px;
+            height: 50px;
+            top: 80%;
+            bottom: 0;
+            left: 40%;
+            right: 0;
+            align-items: center;
+            justify-content: center;"> Retry
+        </button>
+
+        
+    </div>
+</div>
+<div style="position: absolute; display: inline-block;">
+    <div id="You-Win"
+    style ="
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    ">
+    <img src="./img/textfx (2).png" alt="">
+    <button
+            id="Play-Again"
+            style="
+            position:inherit;
+            width:400px;
+            height: 50px;
+            top: 80%;
+            bottom: 0;
+            left: 40%;
+            right: 0;
+            align-items: center;
+            justify-content: center;"> Play Again
+        </button>
+</div>
+
+
+
+
+</div>
+</body>
+<script src="js/util.js"></script>
+<script src="js/Collision-Block.js"></script>
+<script src="js/Enemy.js"></script>
+<script src="js/Sprite.js"></script>
+<script src="js/Projectiles.js"></script>
+<script src="js/Player.js"></script>
+<script src="js/eventListeners.js"></script>
+<script src="js/Collison-tile.js"></script>
+<script src="game.js"></script>
